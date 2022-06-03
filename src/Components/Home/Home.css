@@ -47,23 +47,38 @@
     width: 400px;
     height: 800px;
     margin-left: 5vw;
+    display: flex;
+    align-items: center;
 }
 
 #leave{
     position: absolute;
     width: 410px;
     height: 330px;
-    margin-top: -45px;
+    margin-top: -290px;
 }
 
 .siteBar-ul{
-    padding-top: 100%;
     list-style-type: none;
+    padding-left: 50px;
+    
 }
-
 
 .sb-lists{
     color: black;
     font-size: 30px;
-    margin-bottom: 10px !important;
 }
+
+
+/* !===============================================Cards================================= */
+.sectionFirst{
+    display: flex;
+}
+.card{
+    background-color: #7A513266;
+    border-radius: 30px;
+    width: 350px;
+    height: 520px;
+    margin-left: 55px;
+}
+
