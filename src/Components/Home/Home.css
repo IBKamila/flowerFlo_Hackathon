@@ -70,15 +70,5 @@
 }
 
 
-/* !===============================================Cards================================= */
-.sectionFirst{
-    display: flex;
-}
-.card{
-    background-color: #7A513266;
-    border-radius: 30px;
-    width: 350px;
-    height: 520px;
-    margin-left: 55px;
-}
+
 
