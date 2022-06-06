@@ -8,17 +8,14 @@ import Home from "./Components/Home/Home";
 import ProductList from "./Components/ProductList/ProductList";
 import Login from "./Components/Auth/Login";
 
-
 const MainRoutes = () => {
   return (
     <Routes>
-
       <Route path="/aboutUs" element={<AboutUs />} />
-
-        <Route path="/" element={<Home />}/>
-        <Route path="/add" element={<AddProduct />}/>
-        <Route path="/list" element={<ProductList />}/>
-        <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/add" element={<AddProduct />} />
+      <Route path="/list" element={<ProductList />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 };
