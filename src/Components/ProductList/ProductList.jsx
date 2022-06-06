@@ -22,7 +22,7 @@ const ProductList = () => {
                     <img className='imgList' src={item.img} alt="card" />
                 </div>
                 <div className='card-text'>
-                    <span className='card-title'>{item.title}</span>
+                    <span key={item.id} className='card-title'>{item.title}</span>
                     <p className='card-desc'>{item.description}</p>
                 </div>
                 <div className='card-price'>

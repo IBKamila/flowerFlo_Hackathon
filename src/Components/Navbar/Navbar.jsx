@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Navbar.css";
 import logo from "../../Media/img/LOGO.png";
 import shop from "../../Media/img/shop.png";
@@ -6,6 +6,7 @@ import user from "../../Media/img/user.png";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+
   return (
     <nav>
       <div className="nav-wrapper">
@@ -19,7 +20,12 @@ const Navbar = () => {
             <a href="sass.html">Catalog</a>
           </li>
           <li id="left-ul__second">
-            <a href="badges.html">About us</a>
+            <NavLink to="/aboutUs">
+              {/* <a href="badges.html"> */}
+              About us
+              {/* </a> */}
+            </NavLink>
+
           </li>
         </ul>
         <ul className="right-ul">
@@ -32,11 +38,14 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-icons">
+
+
             {/* <a href="badges.html"> */}
             <NavLink to="/login">
               <img src={user} alt="" />
               {/* </a> */}
             </NavLink>
+
           </li>
         </ul>
       </div>
