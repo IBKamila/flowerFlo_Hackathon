@@ -1,0 +1,57 @@
+.sectionFirst{
+    display: flex;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+}
+
+.card{
+    background-color: #7A513266;
+    border-radius: 30px;
+    width: 350px;
+    height: 520px;
+    margin-left: 5vw;
+    margin-bottom: 10vh;
+    position: relative;
+}
+
+.imgList{
+    width: 250px;
+    height: 200px;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+
+}
+
+.card-text{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.card-title{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.card-price{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.card-price2{
+    font-family: 'Fahkwang', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card-desc{
+    font-family: 'Fahkwang', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+}

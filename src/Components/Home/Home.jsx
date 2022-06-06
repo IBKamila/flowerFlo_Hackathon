@@ -10,6 +10,7 @@ import line from '../../Media/img/line.png'
 import line2 from '../../Media/img/line2.png'
 
 import './Home.css'
+import ProductList from '../ProductList/ProductList';
 
 const Home = () => {
     return (
@@ -40,13 +41,7 @@ const Home = () => {
                         <img src={line2} alt="line" />
                     </ul>
                 </div>
-                <div className='cards'>
-                    <div className='card'>
-                        <img src="#" alt="card" />
-                        <span>Name</span>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
+                <ProductList/>
             </div>
         </>
     );
