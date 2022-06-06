@@ -1,18 +1,26 @@
 import "./App.css";
 import MainRoutes from "./MainRoutes";
-import Navbar from "./Components/Navbar/Navbar"
+import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import ProductContextProvider from "./Context/ProductContext";
+import AuthContextProvider from "./Context/AuthContext";
+
 
 function App() {
-  return <div>
-    <BrowserRouter>
+  return (
+    <div>
+      <BrowserRouter>
       <ProductContextProvider>
-        <Navbar />
-        <MainRoutes/>
-      </ProductContextProvider>
-    </BrowserRouter>
-  </div>;
+
+        <AuthContextProvider>
+          <Navbar />
+          <MainRoutes />
+        </AuthContextProvider>
+        </ProductContextProvider>
+
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;

@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import AddProduct from "./Components/AddProduct/AddProduct";
 import Home from "./Components/Home/Home";
 import ProductList from "./Components/ProductList/ProductList";
-
+import Login from "./Components/Auth/Login";
 
 const MainRoutes = () => {
   return (
@@ -11,6 +11,7 @@ const MainRoutes = () => {
         <Route path="/" element={<Home />}/>
         <Route path="/add" element={<AddProduct />}/>
         <Route path="/list" element={<ProductList />}/>
+        <Route path="/login" element={<Login />} />
     </Routes>
   );
 };
