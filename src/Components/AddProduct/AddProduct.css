@@ -1,20 +1,19 @@
-h2{
-    text-align: center;
+h2 {
+  text-align: center;
 }
-.containerAdd{
-    display: flex;
-}
-
-.siteBarInp{
-    background-color: #7A513266;
-    border-radius: 30px;
-    width: 400px;
-    height: 400px; 
-    margin-top: 10vh;
-    margin-left: 10px;
-
+.containerAdd {
+  display: flex;
 }
 
-.siteBar-inputs{
-    text-align: center;
+.siteBarInp {
+  background-color: #7a513266;
+  border-radius: 30px;
+  width: 400px;
+  height: 400px;
+  margin-top: 10vh;
+  margin-left: 10px;
+}
+
+.siteBar-inputs {
+  text-align: center;
 }

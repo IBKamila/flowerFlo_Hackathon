@@ -17,7 +17,14 @@ const Navbar = () => {
         </span>
         <ul class="left-ul">
           <li id="left-ul__first">
-            <a href="sass.html">Catalog</a>
+            <NavLink to="/list">
+              <a href="sass.html">Catalog</a>
+            </NavLink>
+          </li>
+          <li id="left-ul__first">
+            <NavLink to="/list">
+              <a href="sass.html">Flowers</a>
+            </NavLink>
           </li>
           <li id="left-ul__second">
             <NavLink to="/aboutUs">
@@ -25,7 +32,6 @@ const Navbar = () => {
               About us
               {/* </a> */}
             </NavLink>
-
           </li>
         </ul>
         <ul className="right-ul">
@@ -38,14 +44,11 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-icons">
-
-
             {/* <a href="badges.html"> */}
             <NavLink to="/login">
               <img src={user} alt="" />
               {/* </a> */}
             </NavLink>
-
           </li>
         </ul>
       </div>
