@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Navbar.css";
 import logo from "../../Media/img/LOGO.png";
 import shop from "../../Media/img/shop.png";
@@ -6,6 +6,7 @@ import user from "../../Media/img/user.png";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+
   return (
     <nav>
       <div className="nav-wrapper">
