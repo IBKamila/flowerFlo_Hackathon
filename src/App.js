@@ -11,13 +11,11 @@ function App() {
     <div>
       <BrowserRouter>
       <ProductContextProvider>
-
         <AuthContextProvider>
           <Navbar />
           <MainRoutes />
         </AuthContextProvider>
         </ProductContextProvider>
-
       </BrowserRouter>
     </div>
   );
