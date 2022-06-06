@@ -19,7 +19,13 @@ const Navbar = () => {
             <a href="sass.html">Catalog</a>
           </li>
           <li id="left-ul__second">
-            <a href="badges.html">About us</a>
+            <NavLink to="/aboutUs">
+              {/* <a href="badges.html"> */}
+              About us
+              {/* </a> */}
+            </NavLink>
+
+
           </li>
         </ul>
         <ul className="right-ul">
@@ -32,11 +38,14 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-icons">
+
+
             {/* <a href="badges.html"> */}
             <NavLink to="/login">
               <img src={user} alt="" />
               {/* </a> */}
             </NavLink>
+
           </li>
         </ul>
       </div>

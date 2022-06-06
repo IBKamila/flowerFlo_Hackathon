@@ -1,0 +1,41 @@
+.footer {
+  background-color: #376a4f;
+  text-align: center;
+  height: 35vh;
+}
+
+.text {
+  display: flex;
+  display: inline;
+  justify-content: center;
+  /* padding-top: 50px; */
+  color: rgb(248, 248, 248);
+  opacity: 0.4;
+}
+.imgIcon img {
+  width: 30px;
+  justify-content: space-around;
+  margin: 10px;
+}
+.infoContact {
+  color: aliceblue;
+  font-size: small;
+}
+.infoContact h1 {
+  color: rgb(204, 160, 65);
+}
+.imageFlow {
+  width: 280px;
+  display: flex;
+  margin-top: -220px;
+  margin-left: -25px;
+  float: left;
+}
+.imageFlow1 {
+  width: 280px;
+  display: flex;
+  margin-top: -220px;
+  margin-left: -25px;
+  float: right;
+  transform: rotate(240deg);
+}
