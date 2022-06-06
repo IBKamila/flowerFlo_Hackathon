@@ -24,6 +24,8 @@ const Navbar = () => {
               About us
               {/* </a> */}
             </NavLink>
+
+
           </li>
         </ul>
         <ul className="right-ul">
@@ -36,9 +38,14 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-icons">
-            <a href="badges.html">
+
+
+            {/* <a href="badges.html"> */}
+            <NavLink to="/login">
               <img src={user} alt="" />
-            </a>
+              {/* </a> */}
+            </NavLink>
+
           </li>
         </ul>
       </div>
