@@ -2,8 +2,8 @@ import "./App.css";
 import MainRoutes from "./MainRoutes";
 import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
-import Footer from "./Components/Navbar/Footer/Footer";
 import AboutUs from "./Components/AboutUs/AboutUs";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
