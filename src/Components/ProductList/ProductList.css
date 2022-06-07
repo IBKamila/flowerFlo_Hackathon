@@ -1,57 +1,72 @@
-.sectionFirst{
-    display: flex;
+.sectionFirst {
+  display: flex;
 }
 
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    width: 70vw;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 70vw; */
+  margin-top: 50px;
+  margin-left: 80px;
+  position: relative;
 }
 
-.card{
-    background-color: #7A513266;
-    border-radius: 30px;
-    width: 350px;
-    height: 520px;
-    margin-left: 5vw;
-    margin-bottom: 10vh;
-    position: relative;
+.card {
+  background-color: #7a513266;
+  border-radius: 30px;
+  width: 350px;
+  height: 520px;
+  margin-left: 5vw;
+  margin-bottom: 10vh;
+  position: relative;
 }
 
-.imgList{
-    width: 250px;
-    height: 200px;
-    border-radius: 30px;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-
+.card:hover {
+  background-color: #805e449c;
 }
 
-.card-text{
-    padding-left: 50px;
-    padding-right: 50px;
+.imgList {
+  width: 250px;
+  height: 200px;
+  border-radius: 30px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
-.card-title{
-    font-size: 30px;
-    font-weight: 400;
+.card-text {
+  color: black;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.card-price{
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
+.card-title {
+  color: black;
+  font-size: 30px;
+  font-weight: 400;
 }
 
-.card-price2{
-    font-family: 'Fahkwang', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
+.card-price {
+  color: black;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
 }
 
-.card-desc{
-    font-family: 'Fahkwang', sans-serif;
-    font-size: 22px;
-    font-weight: 300;
+.card-price2 {
+  font-family: "Fahkwang", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card-desc {
+  font-family: "Fahkwang", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.btns {
+  position: absolute;
+  bottom: 0;
+  margin-left: 630px;
 }

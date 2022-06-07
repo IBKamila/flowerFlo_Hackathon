@@ -1,6 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { productContext } from "../../Context/ProductContext";
+import leave from '../../Media/img/leave2.png'
+import edit from '../../Media/img/edit.png'
+import bag from '../../Media/img/bag.png'
+import rectangle from '../../Media/img/rectangle2.png'
+import dollar from '../../Media/img/dollar-square.png'
+import './FlowerDetails.css'
 
 const FlowerDetails = () => {
   const { productDetails, getProductsDetails, deleteProduct } =
@@ -11,17 +17,29 @@ const FlowerDetails = () => {
   }, []);
   return (
     <>
-      {productDetails ? (
-        <>
-          <h2>{productDetails.title}</h2>
-          <NavLink to="/list">
-            <button onClick={() => deleteProduct(id)}>delete</button>
-          </NavLink>
+    {productDetails ? (
+    
+    <div className="contDet">
+      <div className="contDet-photo">
+        <img className="det-photo" src={productDetails.img} alt="detailPhoto" />
+      </div>
+      <div className="contDet-desc">
+        <img className="leaveDet" src={leave} alt="leave" />
+        <div className="titleDet">{productDetails.title}</div>
+        <img className="rectangleDet" src={rectangle} alt="rectangle" />
+        <div className="priceDet"><img className="dollar" src={dollar} alt="dollar" />{productDetails.price}</div>
+        <div className="descDet"><p className="descDet-p">{productDetails.description}</p></div>
+        <div className="iconsDet">
           <NavLink to={`/edit/${id}`}>
-            <button>edit</button>
+            <img onClick={() => deleteProduct(id)} src={edit} alt="edit" />
           </NavLink>
-        </>
-      ) : null}
+          <NavLink to="/list">
+            <img id="bag" src={bag} alt="bag" />
+          </NavLink>
+        </div>
+      </div>
+    </div>
+    ) : null}
     </>
   );
 };
