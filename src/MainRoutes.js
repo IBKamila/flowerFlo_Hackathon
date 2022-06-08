@@ -8,6 +8,7 @@ import Login from "./Components/Auth/Login";
 import EditFlower from "./Components/EditFlower/EditFlower";
 import FlowerDetails from "./Components/FlowerDetails/FlowerDetails";
 import Cart from "./Components/Cart/Cart";
+import PaymentForm from "./Components/PaymentForm/PaymentForm";
 
 const MainRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const MainRoutes = () => {
       <Route path="/edit/:id" element={<EditFlower />} />
       <Route path="/details/:id" element={<FlowerDetails />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/form" element={<PaymentForm />} />
     </Routes>
   );
 };
