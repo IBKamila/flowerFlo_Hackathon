@@ -3,11 +3,17 @@ import { productContext } from "../../Context/ProductContext";
 import "./ProductList.css";
 import tag from "../../Media/img/tag.png";
 import { NavLink } from "react-router-dom";
+
 import { Button } from "@mui/material";
+
+import { cartContext } from "../../Context/CartContext";
+
 
 const ProductList = () => {
   const { getProducts, products, prevPage, nextPage } =
     useContext(productContext);
+
+  const { addProductToCart } = useContext(cartContext);
 
   useEffect(() => {
     getProducts();
@@ -27,6 +33,9 @@ const ProductList = () => {
             </div>
             <div className="card-price">
               <img src={tag} alt="card-tag" />
+
+              <button onClick={() => addProductToCart(item)}>Hui</button>
+
               <span className="card-price2">{item.price}$</span>
             </div>
           </div>
