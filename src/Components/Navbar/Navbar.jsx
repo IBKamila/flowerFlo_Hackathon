@@ -4,9 +4,11 @@ import logo from "../../Media/img/LOGO.png";
 import shop from "../../Media/img/shop.png";
 import user from "../../Media/img/user.png";
 import { NavLink } from "react-router-dom";
+import { Badge } from "@mui/material";
+import { cartContext } from "../../Context/CartContext";
 
 const Navbar = () => {
-
+  const { cartLength } = React.useContext(cartContext);
   return (
     <nav>
       <div className="nav-wrapper">
@@ -39,9 +41,13 @@ const Navbar = () => {
             <input className="search-inp" type="search" aria-label="Search" />
           </span>
           <li className="nav-icons">
-            <a href="badges.html">
-              <img src={shop} alt="" />
-            </a>
+            {/* <a href="badges.html"> */}
+            <NavLink to="/cart">
+              <Badge badgeContent={cartLength} color="error">
+                <img src={shop} alt="cart" />
+              </Badge>
+            </NavLink>
+            {/* </a> */}
           </li>
           <li className="nav-icons">
             {/* <a href="badges.html"> */}
