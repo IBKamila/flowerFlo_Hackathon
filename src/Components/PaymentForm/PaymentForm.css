@@ -1,0 +1,17 @@
+.text {
+  display: flex;
+  text-align: center;
+  color: #054a0a;
+}
+.nan {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 60px;
+}
+.inps {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin: 60px;
+}
