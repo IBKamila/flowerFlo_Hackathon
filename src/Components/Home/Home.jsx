@@ -8,9 +8,8 @@ import frash from '../../Media/img/flash.png'
 import gift from '../../Media/img/gift.png'
 import line from '../../Media/img/line.png'
 import line2 from '../../Media/img/line2.png'
-
+import Card from '../ProductList/Card';
 import './Home.css'
-import ProductList from '../ProductList/ProductList';
 
 const Home = () => {
     return (
@@ -41,7 +40,9 @@ const Home = () => {
                         <img src={line2} alt="line" />
                     </ul>
                 </div>
-                <ProductList/>
+                <div className='homeCards'>
+                    <Card/>
+                </div>
             </div>
         </>
     );
