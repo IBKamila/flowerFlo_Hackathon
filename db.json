@@ -1,6 +1,22 @@
 {
   "products": [
     {
+      "title": "Wedding flower",
+      "description": "fhgbjkrhagr faerjgbjergb agheruohguaq rauiejwgjhjergnrfg kjrhaegiuerjhnqa aeghierjhgijrkg",
+      "img": "https://i.pinimg.com/736x/df/14/ae/df14ae680b59599292291041a7485b82.jpg",
+      "price": "60",
+      "category": "wedding",
+      "id": 1
+    },
+    {
+      "title": "Exotic",
+      "description": "fruhgeag rowifqui rfwhafuiwrhn frwh",
+      "img": "https://i.pinimg.com/originals/fb/d7/d3/fbd7d39324dd3f0ccbc86ee0b3e25ab7.jpg",
+      "price": "100",
+      "category": "exotic",
+      "id": 2
+    },
+    {  
       "title": "Second Flower",
       "description": "Meet my family. There are five of us – my parents, my elder brother, my baby sister and me.",
       "img": "https://i.pinimg.com/736x/dd/f2/85/ddf285c5e25694ad6398b0529c3e6658.jpg",
@@ -58,7 +74,6 @@
       "img": "ibgpig",
       "price": "-7",
       "id": 9
-
     }
   ]
 }

@@ -67,4 +67,6 @@ a{
     width: 20vw;
 }
 
-
+.catalogMenu:hover{
+    cursor: pointer;
+}

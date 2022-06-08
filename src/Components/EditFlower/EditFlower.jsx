@@ -70,6 +70,13 @@ const EditFlower = () => {
             name="price"
             variant="standard"
           />
+          <TextField 
+            id="basic" 
+            label="Category" 
+            variant="standard" 
+            value={inpValues.category}
+            name="category"
+            onChange={(e) => handleChange(e)}/>
           <div className="save-btn">
             <button onClick={handleSave}>Save</button>
           </div>

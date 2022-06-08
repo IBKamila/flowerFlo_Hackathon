@@ -1,14 +1,31 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { Badge } from "@mui/material";
+import { cartContext } from "../../Context/CartContext";
 import "./Navbar.css";
 import logo from "../../Media/img/LOGO.png";
 import shop from "../../Media/img/shop.png";
 import user from "../../Media/img/user.png";
-import { NavLink } from "react-router-dom";
-import { Badge } from "@mui/material";
-import { cartContext } from "../../Context/CartContext";
+import { NavLink, useLocation, useSearchParams } from "react-router-dom";
+
+
+
 
 const Navbar = () => {
   const { cartLength } = React.useContext(cartContext);
+  const [searchValue, setSearchValue] = useState("");
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/list") {
+      setSearchParams({
+        q: searchValue,
+      });
+    }
+  }, [searchValue]);
+
   return (
     <nav>
       <div className="nav-wrapper">
@@ -20,12 +37,12 @@ const Navbar = () => {
         <ul class="left-ul">
           <li id="left-ul__first">
             <NavLink to="/list">
-              <a href="sass.html">Catalog</a>
-            </NavLink>
+                Category
+              </NavLink>
           </li>
           <li id="left-ul__first">
             <NavLink to="/list">
-              <a href="sass.html">Flowers</a>
+              Flowers
             </NavLink>
           </li>
           <li id="left-ul__second">
@@ -38,7 +55,12 @@ const Navbar = () => {
         </ul>
         <ul className="right-ul">
           <span className="wrap">
-            <input className="search-inp" type="search" aria-label="Search" />
+            <input 
+            className="search-inp" 
+            type="search"
+            value={searchValue} 
+            onChange={(e) => setSearchValue(e.target.value)}
+            aria-label="Search" />
           </span>
           <li className="nav-icons">
             {/* <a href="badges.html"> */}
