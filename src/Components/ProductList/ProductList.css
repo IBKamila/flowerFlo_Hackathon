@@ -19,6 +19,7 @@
 }
 
 .cards{
+    position: relative;
     margin-top: 10vh;
     margin-left: auto;
     margin-right: auto;
@@ -83,5 +84,5 @@
 .btns {
   position: absolute;
   bottom: 0;
-  margin-left: 630px;
+  /* margin-left: 630px; */
 }

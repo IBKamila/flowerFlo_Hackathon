@@ -1,3 +1,7 @@
 .formControl{
     display: flex;
 }
+
+.MuiRadio-root{
+    opacity: 0 !important;
+}

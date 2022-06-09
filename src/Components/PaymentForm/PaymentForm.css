@@ -10,7 +10,7 @@
   margin: 60px;
 }
 .inps {
-  display: flex;
+  display: block;
   justify-content: center;
   justify-content: space-around;
   margin: 60px;
