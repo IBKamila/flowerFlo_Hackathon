@@ -11,6 +11,11 @@
     align-items: center;
     margin-left: -7vw;
 }
+@media (max-width: 768px) {
+    .left-ul{
+      display: none;
+    }
+  }
 
 a{
     color: #FFFF;
@@ -32,8 +37,14 @@ a{
 
 
 .brand-logo{
+    height: 100%;
+    margin-top: 5%;
     margin-left: 7vw;
-    margin-top: 1vh;
+}
+@media (max-width: 830px) {
+    .brand-logo{
+      display: none;
+  }
 }
 
 .nav-icons{
@@ -59,12 +70,27 @@ a{
     transition: all .5s;
 }
 
-
+@media (max-width: 435px) {
+    .search-inp{
+      width: 60px;
+    }
+  }
 
 .search-inp:focus{
     border: 0;
     background: #D1DFC9;
     width: 20vw;
+}
+
+.catalogMenu:hover{
+    cursor: pointer;
+}
+
+.logLinks{
+    color: #000000;
+}
+.logLinks:hover{
+    color: #000000;
 }
 
 

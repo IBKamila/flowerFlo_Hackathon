@@ -1,36 +1,45 @@
 import React from "react";
 import "./Footer.css";
+import flower from "../../Media/img/Flower-Watercolor-Art-PNG-Photos.png"
 
 const Footer = () => {
   return (
-    <>
-      <footer className="footer">
-        <div>
-          <div className="infoContact">
-            <h1>Contacts</h1>
-            <h2>Kyrgyzstan, Bishkek city Tabyshalieva street 29</h2>
-            <h3>flowerflo@gmail.com</h3>
-            <h3>+996(555443322)</h3>
-          </div>
-          <div className="imgIcon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png"></img>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"></img>
-            <img src="https://cdn.worldvectorlogo.com/logos/telegram-1.svg"></img>
-          </div>
-          <img
-            className="imageFlow"
-            src="https://freepngimg.com/save/100276-watercolor-photos-flower-art-hd-image-free/1780x1684"
-          ></img>
-          <img
-            className="imageFlow1"
-            src="https://freepngimg.com/save/100276-watercolor-photos-flower-art-hd-image-free/1780x1684"
-          ></img>
-          <div>
-            <p className="text">© TKN 2022</p>
-          </div>
-        </div>
-      </footer>
-    </>
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="parent row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Job openings</a></li>
+                            <li><a href="#">Employee success</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Company Name © 2018</p>
+                    </div>
+                        <img className="footerImg" src={flower} alt="flower" />
+                </div>
+            </div>
+        </footer>
+    </div>
   );
 };
 

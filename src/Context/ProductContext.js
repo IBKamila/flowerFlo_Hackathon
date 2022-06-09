@@ -22,15 +22,14 @@ const reducer = (state = INIT_STATE, action) => {
   }
 };
 
-let page = 1; // Переменная для пагинации
+let page = 1;
 let totalPage = [];
 
 const ProductContextProvider = ({ children }) => {
   const [searchVal, setSearchVal] = useState("");
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  // const location = useLocation();
-  // console.log(location.search);
+  const location = useLocation();
 
   const addProduct = async (newProduct) => {
     await axios.post(API, newProduct);
@@ -38,7 +37,7 @@ const ProductContextProvider = ({ children }) => {
 
   const getProducts = async () => {
     const { data } = await axios.get(
-      `${API}?_page=${page}&_limit=3&q=${searchVal}`
+      `${API}?_page=${page}&_limit=2&q=${searchVal}`
     );
     dispatch({
       type: "GET_PRODUCTS",
@@ -67,7 +66,7 @@ const ProductContextProvider = ({ children }) => {
 
   // !pagination
 
-  const productsLimit = 3;
+  const productsLimit = 2;
 
   async function totalPageFunc() {
     let { data } = await axios.get(API);
@@ -76,7 +75,7 @@ const ProductContextProvider = ({ children }) => {
 
   const prevPage = () => {
     if (page <= 1) return;
-    page--;
+    page++;
     getProducts();
   };
 

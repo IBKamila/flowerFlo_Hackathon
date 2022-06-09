@@ -1,6 +1,7 @@
 {
   "products": [
     {
+<<<<<<< HEAD
       "title": "FlowerFlower",
       "description": "Meet my family. There are five of us – my parents, my elder brother, my baby sister and me.",
       "img": "https://scentales.com/wp-content/uploads/2020/06/yuna-flower-bouquet-01-600x800-1.jpg",
@@ -48,6 +49,30 @@
       "img": "ibgpig",
       "price": "-7",
       "id": 9
+=======
+      "title": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "img": "https://64.media.tumblr.com/d6b0bead0185ec7342a2a8c91e67664a/tumblr_pob3n4D4dy1su1ln8_640.jpg",
+      "price": "90",
+      "category": "wedding",
+      "id": 2
+    },
+    {
+      "title": "Blue bell",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "img": "https://i.pinimg.com/originals/42/97/94/4297948c4f24ecb4ef6430c30ab49be2.jpg",
+      "price": "200",
+      "category": "exotic",
+      "id": 3
+    },
+    {
+      "title": "Some pot",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "img": "https://cdn.shopify.com/s/files/1/0417/7140/1380/files/Tropical_Houseplants_Image_2_480x480.jpg?v=1613401318",
+      "price": "56",
+      "category": "pot",
+      "id": 4
+>>>>>>> 6f308d43a7b521b23ffcde45003c7664947aee67
     }
   ]
 }
