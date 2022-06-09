@@ -16,16 +16,16 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import Logout from "@mui/icons-material/Logout";
 import Sidebar from "./Sidebar";
+import fav from "../../Media/img/heart.svg";
+import { favContext } from "../../Context/FavContext";
 
 const Navbar = () => {
   const { cartLength } = useContext(cartContext);
+  const { favLength } = useContext(favContext);
   const { email, handleLogout } = useContext(authContext);
   const [searchValue, setSearchValue] = useState("");
-
   const [searchParams, setSearchParams] = useSearchParams();
-
   const location = useLocation();
-
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -64,6 +64,7 @@ const Navbar = () => {
           </li>
           <li id="left-ul__last">
             {email === "admin@gmail.com" ? (
+             
               <div className="adminPanel">
                 <NavLink to="/">Admin panel</NavLink>
               </div>
@@ -87,6 +88,15 @@ const Navbar = () => {
               </Badge>
             </NavLink>
           </li>
+
+          <li className="nav-icons">
+            <NavLink to="/fav">
+              <Badge badgeContent={favLength} color="error">
+                <img src={fav} alt="cart" />
+              </Badge>
+            </NavLink>
+          </li>
+
           <Tooltip title="Account settings">
             <li className="nav-icons">
               <IconButton

@@ -5,6 +5,10 @@ export function getCountProductsCart() {
   return cart ? cart.products.length : 0; // если есть что-то в хранилище, верни нам длинну массива карточки. Если пустое, то верни 0
 }
 
+export function getCountProductsFav() {
+  let fav = JSON.parse(localStorage.getItem("fav"));
+  return fav ? fav.products.length : 0;
+}
 //функция для высчитывания цены в subPrice
 export function calcSubPrice(product) {
   return product.count * product.item.price;
