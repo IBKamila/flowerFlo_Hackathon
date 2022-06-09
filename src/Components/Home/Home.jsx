@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { productContext } from "../../Context/ProductContext";
+import tag from "../../Media/img/tag.png";
 import text from '../../Media/img/text.png'
 import rect from '../../Media/img/rectangle.png'
 import leave from '../../Media/img/leave.png'
@@ -8,25 +10,23 @@ import frash from '../../Media/img/flash.png'
 import gift from '../../Media/img/gift.png'
 import line from '../../Media/img/line.png'
 import line2 from '../../Media/img/line2.png'
-import Card from '../ProductList/Card';
 import './Home.css'
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
+    const {products} = useContext(productContext);
+
     return (
         <>
-            <div className='container'>
+            <div className='container-head'>
                 <img className='back-text' src={text} alt="text-img" />
-                <div className="block">
-                    <div className='block-left'>
-                        <span id='bl-1'>Your home is where your plants are</span><br/><br/><br/><br/>
-                        <span id='bl-2'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis pariatur exercitationem, quisquam corporis quae saepe vel, atque vitae, perferendis magni nobis inventore? Nostrum reprehenderit nam nobis, dolorum beatae similique eveniet?</span>
-                    </div>
-                    <div className='block-right'>
-                        <img id='rect' src={rect} alt="rect" />
-                    </div>
+                <div className='block-left'>
+                    <span id='bl-1'>Your home is where your plants are!</span><br/><br/><br/><br/>
+                    <span id='bl-2'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis pariatur exercitationem, quisquam corporis quae saepe vel, atque vitae, perferendis magni nobis inventore? Nostrum reprehenderit nam nobis, dolorum beatae similique eveniet?</span>
                 </div>
+                <img id='rect' src={rect} alt="rect" />
             </div>
-            <div className='container sectionFirst'>
+            <div className='sectionFirst'>
                 <div className='siteBar'>
                     <img id='leave' src={leave} alt="" />
                     <ul className='siteBar-ul'>
@@ -41,7 +41,20 @@ const Home = () => {
                     </ul>
                 </div>
                 <div className='homeCards'>
-                    <Card/>
+                {products.map((item) => (
+                <NavLink to={`/details/${item.id}`}>
+                    <div className="cardHome">
+                    <div>
+                        <img className="imgListHome" src={item.img} alt="card" />
+                    </div>
+                    <div className="card-textHome">
+                        <span className="card-titleHome">{item.title}</span>
+                        <p className="card-descHome">{item.description}</p>
+                    </div>
+                        <div className="card-priceHome"><img src={tag} alt="card-tagHome" />{item.price}$</div>
+                    </div>
+                </NavLink>
+                ))}
                 </div>
             </div>
         </>
