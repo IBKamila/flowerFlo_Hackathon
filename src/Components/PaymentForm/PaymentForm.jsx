@@ -39,9 +39,14 @@ const PaymentForm = () => {
           <h1 id="orderHeader">Order Form</h1>
         </div>
         <div className="nan">
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Address" />
-          <input id="number-inp" type="number" placeholder="number" />
+          <input className="name" type="text" placeholder="Name" />
+          <input className="adress" type="text" placeholder="Address" />
+          <input
+            className="number"
+            id="number-inp"
+            type="number"
+            placeholder="number"
+          />
         </div>
 
         <Cards
@@ -53,6 +58,7 @@ const PaymentForm = () => {
         />
         <form className="inps" action="">
           <input
+            className="number2"
             type="number"
             name="number"
             placeholder="Card Number"
@@ -61,6 +67,7 @@ const PaymentForm = () => {
           />
 
           <input
+            className="text2"
             type="text"
             name="name"
             placeholder="Your Name"
@@ -69,7 +76,7 @@ const PaymentForm = () => {
           />
 
           <select
-            className="form-control-month"
+            className="formControl"
             name="expiry"
             onChange={handleDate}
             onFocus={(e) => SetFocus(e.target.name)}
@@ -90,7 +97,7 @@ const PaymentForm = () => {
           </select>
 
           <select
-            className="form-control-year"
+            className="formYear"
             name="expiry"
             onChange={handleExpiry}
             onFocus={(e) => SetFocus(e.target.name)}
@@ -109,6 +116,7 @@ const PaymentForm = () => {
           </select>
 
           <input
+            className="cvc"
             type="tel"
             name="cvc"
             maxLength="3"
@@ -120,7 +128,9 @@ const PaymentForm = () => {
           />
 
           <Link to="/">
-            <button id="payment-button">PAY NOW</button>
+            <button className="btnPn" id="payment-button">
+              PAY NOW
+            </button>
           </Link>
         </form>
       </div>

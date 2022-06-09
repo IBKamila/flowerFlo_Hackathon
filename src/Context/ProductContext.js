@@ -29,8 +29,7 @@ const ProductContextProvider = ({ children }) => {
   const [searchVal, setSearchVal] = useState("");
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  // const location = useLocation();
-  // console.log(location.search);
+  const location = useLocation();
 
   const addProduct = async (newProduct) => {
     await axios.post(API, newProduct);
@@ -67,7 +66,7 @@ const ProductContextProvider = ({ children }) => {
 
   // !pagination
 
-  const productsLimit = 3;
+  const productsLimit = 4;
 
   async function totalPageFunc() {
     let { data } = await axios.get(API);

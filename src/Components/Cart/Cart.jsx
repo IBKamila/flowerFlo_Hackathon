@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import veg from "../../Media/img/veg.png";
 import { cartContext } from "../../Context/CartContext";
+import "./Cart.css";
+import { NavLink } from "react-router-dom";
 
 const Cart = () => {
   const { cart, getCart, deleteCartProduct, changeProductCount } =
@@ -11,54 +13,60 @@ const Cart = () => {
   }, []);
 
   return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Фото</th>
-            <th>Название</th>
-            <th>Цена</th>
-            <th>Количество</th>
-            <th>Сумма продукта</th>
-          </tr>
-        </thead>
-        <tbody>
-          {cart.products
-            ? cart.products.map((elem) => (
-                <tr>
-                  <td>
-                    <img width={50} src={elem.item.img1} alt="plants" />
-                  </td>
-                  <td>{elem.item.title}</td>
-                  <td>{elem.item.price}</td>
-                  <td>
-                    <input
+    <>
+      <div class="CartContainer">
+   	   <div class="Header">
+   	   	<h3 class="Heading">Shopping Cart</h3>
+   	   	<h5 class="Action">Remove all</h5>
+   	   </div>
+
+   	   <div class="Cart-Items">
+        {cart.products
+            ? cart.products.map((elem) => (<>
+   	   	  <div class="image-box">
+   	   	  	<img src={elem.item.img} style={{ height:"120px" }} />
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h1 class="title">{elem.item.title}</h1>
+              <br/>
+   	   	  	<h3 class="subtitle">${elem.item.price}</h3>
+   	   	  	<img src={veg} style={{ height:"30px" }}/>
+   	   	  </div>
+   	   	  <div class="counter">
+            <input
                       type="number"
                       value={elem.count}
                       onChange={(e) =>
                         changeProductCount(elem.item.id, e.target.value)
                       }
                     />{" "}
-                    //кол-во продуктов
-                  </td>
-                  <td>{elem.subPrice}</td>
-                  <td>
-                    <button onClick={() => deleteCartProduct(elem.item.id)}>
-                      Удалить
-                    </button>
-                  </td>
-                </tr>
-              ))
+   	   	  </div>
+   	   	  <div class="prices">
+   	   	  	<div class="amount">${elem.subPrice}</div>
+   	   	  	<div class="save"><u>Save for later</u></div>
+   	   	  	<div class="remove" ><u onClick={() => deleteCartProduct(elem.item.id)}>Remove</u></div>
+   	   	  </div>
+            </>))
             : null}
-        </tbody>
-      </table>
+   	   </div>
 
-      <h4> Общая сумма:{cart.totalPrice}</h4>
+   	   
+   	 <hr/> 
+   	 <div class="checkout">
+   	 <div class="total">
+   	 	<div>
+   	 		<div class="Subtotal">Sub-Total</div>
+   	 		<div class="items">{cart.count}</div>
+   	 	</div>
+   	 	<div class="total-amount">${cart.totalPrice}</div>
+   	 </div>
       <NavLink to="/form">
-        <button> Заказать</button>
-      </NavLink>
-    </div>
+   	 <button class="button">Order</button></NavLink></div>
+   </div>
+   </>
   );
+
+
 };
 
 export default Cart;
