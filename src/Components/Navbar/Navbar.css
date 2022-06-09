@@ -1,96 +1,96 @@
-.nav-wrapper{
-    display: flex;
-    background-color: #376A4F;
-    height: 17vh;
-    justify-content: space-between;
+.nav-wrapper {
+  display: flex;
+  background-color: #376a4f;
+  height: 17vh;
+  justify-content: space-between;
 }
 
-.left-ul{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    margin-left: -7vw;
+.left-ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-left: -7vw;
 }
 @media (max-width: 768px) {
-    .left-ul{
-      display: none;
-    }
+  .left-ul {
+    display: none;
   }
-
-a{
-    color: #FFFF;
-    text-decoration: none;
-    font-size: 20px;
 }
 
-#left-ul__first{
-    margin-right: 6vw;
-    color: #FFFF;
+a {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 20px;
 }
 
-.right-ul{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    margin-right: 7vw;
+#left-ul__first {
+  margin-right: 6vw;
+  color: #ffff;
 }
 
+.right-ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-right: 7vw;
+}
 
-.brand-logo{
-    height: 100%;
-    margin-top: 5%;
-    margin-left: 7vw;
+.brand-logo {
+  height: 100%;
+  margin-top: 5%;
+  margin-left: 7vw;
 }
 @media (max-width: 830px) {
-    .brand-logo{
-      display: none;
+  .brand-logo {
+    display: none;
   }
 }
 
-.nav-icons{
-    size: 24px;
-    margin-right: 3vw;
+.nav-icons {
+  size: 24px;
+  margin-right: 3vw;
 }
 
 .wrap {
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 10px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px;
 }
-.search-inp{
-    border: #FFFF;
-    border-radius: 150px;
-    color: #000000;
-    height: 26px;
-    padding: 10px;
-    margin-right: 3vw;
-    background: #D1DFC9 url(../../Media/img/search.png) no-repeat 10px center;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    transition: all .5s;
+.search-inp {
+  border: #ffff;
+  border-radius: 150px;
+  color: #000000;
+  height: 26px;
+  padding: 10px;
+  margin-right: 3vw;
+  background: #d1dfc9 url(../../Media/img/search.png) no-repeat 10px center;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 @media (max-width: 435px) {
-    .search-inp{
-      width: 60px;
-    }
+  .search-inp {
+    width: 60px;
   }
-
-.search-inp:focus{
-    border: 0;
-    background: #D1DFC9;
-    width: 20vw;
 }
 
-.catalogMenu:hover{
-    cursor: pointer;
+.search-inp:focus {
+  border: 0;
+  background: #d1dfc9;
+  width: 20vw;
 }
 
-.logLinks{
-    color: #000000;
-}
-.logLinks:hover{
-    color: #000000;
+.catalogMenu:hover {
+  cursor: pointer;
 }
 
-
+.logLinks {
+  color: #000000;
+}
+.logLinks:hover {
+  color: #000000;
+}
+.adminPanel {
+  margin-left: 80px;
+}

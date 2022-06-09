@@ -1,5 +1,4 @@
 .prodList {
-  /* background-color: white; */
   width: 80vw;
   height: auto;
   margin-left: auto;
@@ -25,10 +24,10 @@
 .cards {
   position: relative;
   margin-top: 10vh;
+  
   margin-left: 170px;
   margin-right: auto;
   display: flex;
-  /* flex-wrap: wrap; */
   width: 70vw;
 }
 .card {
@@ -70,7 +69,16 @@
   color: black;
   position: absolute;
   bottom: 5%;
-  right: 5%;
+  right: 35%;
+  justify-content: center;
+}
+
+.incCart {
+  margin: 10px;
+}
+.incSale {
+  margin: 5px;
+  margin-left: 30px;
 }
 
 .card-price2 {
@@ -81,8 +89,10 @@
 
 .card-desc {
   font-family: "Fahkwang", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 300;
+  padding-bottom: 50px;
+  padding-top: 10px;
 }
 
 .btns {

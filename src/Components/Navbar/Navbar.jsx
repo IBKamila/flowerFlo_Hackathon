@@ -23,14 +23,10 @@ import { favContext } from "../../Context/FavContext";
 const Navbar = () => {
   const { cartLength } = useContext(cartContext);
   const { favLength } = useContext(favContext);
-
   const { email, handleLogout } = useContext(authContext);
   const [searchValue, setSearchValue] = useState("");
-
   const [searchParams, setSearchParams] = useSearchParams();
-
   const location = useLocation();
-
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -69,7 +65,10 @@ const Navbar = () => {
           </li>
           <li id="left-ul__last">
             {email === "admin@gmail.com" ? (
-              <NavLink to="/">Admin panel</NavLink>
+             
+              <div className="adminPanel">
+                <NavLink to="/">Admin panel</NavLink>
+              </div>
             ) : null}
           </li>
         </ul>
