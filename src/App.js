@@ -6,20 +6,23 @@ import Footer from "./Components/Footer/Footer";
 import ProductContextProvider from "./Context/ProductContext";
 import AuthContextProvider from "./Context/AuthContext";
 import CartContextProvider from "./Context/CartContext";
+import FavContextProvider from "./Context/FavContext";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        <CartContextProvider>
-          <ProductContextProvider>
-            <AuthContextProvider>
-              <Navbar />
-              <MainRoutes />
-              <Footer />
-            </AuthContextProvider>
-          </ProductContextProvider>
-        </CartContextProvider>
+        <FavContextProvider>
+          <CartContextProvider>
+            <ProductContextProvider>
+              <AuthContextProvider>
+                <Navbar />
+                <MainRoutes />
+                <Footer />
+              </AuthContextProvider>
+            </ProductContextProvider>
+          </CartContextProvider>
+        </FavContextProvider>
       </BrowserRouter>
     </div>
   );

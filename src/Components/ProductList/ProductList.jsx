@@ -2,24 +2,25 @@ import React, { useContext, useEffect, useState } from "react";
 import { productContext } from "../../Context/ProductContext";
 import "./ProductList.css";
 import { NavLink, useSearchParams } from "react-router-dom";
-import Filter from "../Filter/Filter"
+import Filter from "../Filter/Filter";
 import tag from "../../Media/img/tag.png";
-
-
 import { Button } from "@mui/material";
-
 import { cartContext } from "../../Context/CartContext";
-
+import fav from "../../Media/img/heart.svg";
+import { favContext } from "../../Context/FavContext";
 
 const ProductList = () => {
   const { getProducts, products, prevPage, nextPage } =
-  useContext(productContext);
+    useContext(productContext);
 
   const { addProductToCart } = useContext(cartContext);
+  const { addProductToFav } = useContext(favContext);
 
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const [category, setCategory] = useState(searchParams.get("category") || "all");
+  const [category, setCategory] = useState(
+    searchParams.get("category") || "all"
+  );
 
   const paramsWithCategory = () => {
     return {
@@ -54,7 +55,11 @@ const ProductList = () => {
   return (
     <div className="prodList">
       <div className="sideNav">
-        <Filter category={category} setCategory={setCategory} />
+        <Filter
+          className="filter"
+          category={category}
+          setCategory={setCategory}
+        />
       </div>
       <div className="cards">
         {products.map((item) => (
@@ -68,6 +73,12 @@ const ProductList = () => {
                 <p className="card-desc">{item.description}</p>
               </div>
               <div className="card-price">
+                <img
+                  className="incFav"
+                  src={fav}
+                  onClick={() => addProductToFav(item)}
+                ></img>
+
                 <img src={tag} alt="card-tag" />
 
                 <button onClick={() => addProductToCart(item)}>Hui</button>
@@ -77,11 +88,14 @@ const ProductList = () => {
             </div>
           </NavLink>
         ))}
-        </div>
-        <div className="btns">
-          <Button onClick={() => prevPage()}>Назад</Button>
-          <Button onClick={() => nextPage()}>Вперед</Button>
-        </div>
+      </div>
+      <div className="btns">
+        <Button onClick={() => prevPage()}>Prev</Button>
+        <Button>1</Button>
+        <Button>2</Button>
+        <Button>3</Button>
+        <Button onClick={() => nextPage()}>Next</Button>
+      </div>
     </div>
   );
 };
