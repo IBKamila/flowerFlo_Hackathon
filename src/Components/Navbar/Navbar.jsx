@@ -16,6 +16,7 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Logout from '@mui/icons-material/Logout';
 import Sidebar from "./Sidebar";
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
 
 
@@ -140,6 +141,13 @@ const Navbar = () => {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
+        {email === "admin@gmail.com" ? (
+        <NavLink className="logLinks" to="/add">
+          <MenuItem>
+          <AddCircleOutlineIcon fontSize="large"/> Add flower
+          </MenuItem>
+          </NavLink>
+          ) : null}
         {email ? null : (
           <NavLink className="logLinks" to="/login">
           <MenuItem>
