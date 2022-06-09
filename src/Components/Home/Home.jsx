@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { productContext } from "../../Context/ProductContext";
 import tag from "../../Media/img/tag.png";
 import text from "../../Media/img/text.png";
@@ -12,10 +12,22 @@ import line from "../../Media/img/line.png";
 import line2 from "../../Media/img/line2.png";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
-import { Button } from "@mui/material";
+import ReactPaginate from "react-paginate";
 
 const Home = () => {
-  const { products, prevPage, nextPage } = useContext(productContext);
+  const { products } = useContext(productContext);
+
+  // !pagination
+
+  const [pageNumber, setPageNumber] = useState(0);
+  const productsLimit = 2;
+  const productVisited = pageNumber * productsLimit;
+
+  const pageCount = Math.ceil(products.length / productsLimit);
+  let sliceTwoIndex = productVisited + productsLimit;
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
   return (
     <>
@@ -71,7 +83,7 @@ const Home = () => {
           </ul>
         </div>
         <div className="homeCards">
-          {products.map((item) => (
+          {products.slice(productVisited, sliceTwoIndex).map((item) => (
             <NavLink to={`/details/${item.id}`}>
               <div className="cardHome">
                 <div>
@@ -90,13 +102,18 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="batns">
-        <Button onClick={() => prevPage()}>Prev</Button>
-        <Button>1</Button>
-        <Button>2</Button>
-        <Button>3</Button>
-        <Button onClick={() => nextPage()}>Next</Button>
-      </div>
+      <ReactPaginate
+        className="pgnt"
+        previousLabel={"PREV"}
+        nextLabel={"NEXT"}
+        pageCount={pageCount}
+        containerClassNAme={"paginationBttns"}
+        previousLinkClassName={"previousBttn"}
+        nextLinkClassName={"nextBttn"}
+        disabledClasName={"paginationDisabled"}
+        activeClassName={"paginationActive"}
+        onPageChange={changePage}
+      />
     </>
   );
 };

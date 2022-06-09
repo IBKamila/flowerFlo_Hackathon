@@ -24,11 +24,12 @@
 .cards {
   position: relative;
   margin-top: 10vh;
-  
+
   margin-left: 170px;
   margin-right: auto;
   display: flex;
   width: 70vw;
+  flex-wrap: wrap;
 }
 .card {
   background-color: #7a513266;
@@ -100,4 +101,49 @@
   bottom: 0;
   margin-left: 480px;
   margin-bottom: 40px;
+}
+.pgnt {
+  text-decoration: none;
+  color: #7a513266;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  cursor: pointer;
+  width: 40vw;
+  margin: 0 auto;
+  margin-bottom: 70px !important;
+}
+
+.pgnt li a {
+  color: #7a513266;
+}
+
+.paginationBttns {
+  width: 80%;
+  height: 10%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 5% auto;
+}
+
+.paginationBttns a {
+  padding: 10%;
+  margin: 10% 8px;
+  border-radius: 5px;
+  /* border: 1.5px solid rgba(0, 145, 212, 0.904); */
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.paginationBttns a:hover {
+  color: white;
+}
+
+.paginationActive a {
+  font-size: 20px;
+  background-color: #7a513266;
+  border-radius: 10px;
 }

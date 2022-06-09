@@ -1,120 +1,58 @@
 {
   "products": [
     {
-<<<<<<< HEAD
-      "title": "FlowerFlower",
-      "description": "Meet my family. There are five of us – my parents, my elder brother, my baby sister and me.",
-      "img": "https://scentales.com/wp-content/uploads/2020/06/yuna-flower-bouquet-01-600x800-1.jpg",
-      "price": "20",
-      "id": 3
-    },
-    {
-      "title": "Bouquet",
-      "description": "Meet my family. There are five of us – my parents, my elder brother, my baby sister and me. ",
-      "img": "https://i.pinimg.com/564x/22/1e/f9/221ef9f8a9e13cca543fab52ba8bed73.jpg",
-      "price": "50",
-      "id": 4
-    },
-    {
-      "title": "jnrysm",
-      "description": "mrsym",
-      "img": " etm",
-      "price": "4",
-      "id": 5
-    },
-    {
-      "title": "igbpi",
-      "description": "bkl",
-      "img": "ibgluj",
-      "price": "14",
-      "id": 6
-    },
-    {
-      "title": " rrg",
-      "description": " nrnrn",
-      "img": "tbtb",
-      "price": 0,
-      "id": 7
-    },
-    {
-      "title": ";kn;hoh",
-      "description": "ljblj",
-      "img": "bk;lk",
-      "price": "5",
-      "id": 8
-    },
-    {
-      "title": "ibg;3ipg",
-      "description": "ighpig",
-      "img": "ibgpig",
-      "price": "-7",
-      "id": 9
-=======
-      "title": "Lorem ipsum",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "img": "https://64.media.tumblr.com/d6b0bead0185ec7342a2a8c91e67664a/tumblr_pob3n4D4dy1su1ln8_640.jpg",
-      "price": "90",
+      "title": "Pink",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+      "img": "https://cdn.shopify.com/s/files/1/1358/2883/products/classic-bouquet_300x300.jpg?v=1618167844",
+      "price": "70",
       "category": "wedding",
+      "comments": [],
+      "id": 1
+    },
+    {
+      "title": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Mwdm6zll93J7-TIT_uIddldfQWoe9O0qCA&usqp=CAU",
+      "price": "100",
+      "category": "wedding",
+      "comments": [],
       "id": 2
     },
     {
-<<<<<<< HEAD
-      "title": "FlowerFlower",
-      "description": "Meet my family. There are five of us – my parents, my elder brother, my baby sister and me.",
-      "img": "https://scentales.com/wp-content/uploads/2020/06/yuna-flower-bouquet-01-600x800-1.jpg",
-      "price": "20",
+      "title": "Boy",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+      "img": "https://cgaxisimages.fra1.cdn.digitaloceanspaces.com/2014/08/f23-copy.jpg",
+      "price": "50",
+      "category": "pot",
+      "comments": [],
       "id": 3
     },
     {
-      "title": "Bouquet",
-      "description": "Meet my family. There are five of us – my parents, my elder brother, my baby sister and me. ",
-      "img": "https://i.pinimg.com/564x/22/1e/f9/221ef9f8a9e13cca543fab52ba8bed73.jpg",
-      "price": "50",
+      "title": "Pot flower",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+      "img": "https://www.thesprucecrafts.com/thmb/a6GSGfajB14wX6GMY8VVxXnvLCM=/420x0/filters:no_upscale():max_bytes(150000):strip_icc()/IMG_1565_sm-56a2626c5f9b58b7d0c98c19-5a62065589eacc0036453a90.jpg",
+      "price": "129",
+      "category": "pot",
+      "comments": [],
       "id": 4
     },
     {
-      "title": "jnrysm",
-      "description": "mrsym",
-      "img": " etm",
-      "price": "4",
+      "title": "Exo flower",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+      "img": "https://i.pinimg.com/originals/fb/d7/d3/fbd7d39324dd3f0ccbc86ee0b3e25ab7.jpg",
+      "price": "300",
+      "category": "exotic",
+      "comments": [],
       "id": 5
     },
     {
-      "title": "igbpi",
-      "description": "bkl",
-      "img": "ibgluj",
-      "price": "14",
-      "id": 6
-    },
-    {
-      "title": " rrg",
-      "description": " nrnrn",
-      "img": "tbtb",
-      "price": 0,
-      "id": 7
-    },
-    {
-      "title": ";kn;hoh",
-      "description": "ljblj",
-      "img": "bk;lk",
-      "price": "5",
-      "id": 8
-=======
-      "title": "Blue bell",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "img": "https://i.pinimg.com/originals/42/97/94/4297948c4f24ecb4ef6430c30ab49be2.jpg",
+      "title": "Gift sert",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+      "img": "https://cdn.montessoriservices.com/product/1200/giftcertificate_1.jpg",
       "price": "200",
-      "category": "exotic",
-      "id": 3
-    },
-    {
-      "title": "Some pot",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-      "img": "https://cdn.shopify.com/s/files/1/0417/7140/1380/files/Tropical_Houseplants_Image_2_480x480.jpg?v=1613401318",
-      "price": "56",
-      "category": "pot",
-      "id": 4
->>>>>>> 6f308d43a7b521b23ffcde45003c7664947aee67
+      "category": "gift",
+      "comments": [],
+      "id": 6
     }
   ]
 }

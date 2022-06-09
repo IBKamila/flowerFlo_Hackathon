@@ -16,17 +16,21 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import Logout from "@mui/icons-material/Logout";
 import Sidebar from "./Sidebar";
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import fav from "../../Media/img/heart.svg";
 import { favContext } from "../../Context/FavContext";
+import AddIcon from "@mui/icons-material/Add";
 
 const Navbar = () => {
   const { cartLength } = useContext(cartContext);
   const { favLength } = useContext(favContext);
+
   const { email, handleLogout } = useContext(authContext);
   const [searchValue, setSearchValue] = useState("");
+
   const [searchParams, setSearchParams] = useSearchParams();
+
   const location = useLocation();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -58,18 +62,12 @@ const Navbar = () => {
         />
         <ul class="left-ul">
           <li id="left-ul__first">
-            <NavLink to="/list">Category</NavLink>
+            <NavLink className="navLink" to="/list">
+              Category
+            </NavLink>
           </li>
-          <li id="left-ul__second">
+          <li className="navLink" id="left-ul__second">
             <NavLink to="/aboutUs">About us</NavLink>
-          </li>
-          <li id="left-ul__last">
-            {email === "admin@gmail.com" ? (
-             
-              <div className="adminPanel">
-                <NavLink to="/">Admin panel</NavLink>
-              </div>
-            ) : null}
           </li>
         </ul>
         <ul className="right-ul">
@@ -150,12 +148,12 @@ const Navbar = () => {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         {email === "admin@gmail.com" ? (
-        <NavLink className="logLinks" to="/add">
-          <MenuItem>
-          <AddCircleOutlineIcon fontSize="large"/> Add flower
-          </MenuItem>
+          <NavLink className="logLinks" to="/add">
+            <MenuItem>
+              <AddIcon fontSize="large" /> Add flower
+            </MenuItem>
           </NavLink>
-          ) : null}
+        ) : null}
         {email ? null : (
           <NavLink className="logLinks" to="/login">
             <MenuItem>
