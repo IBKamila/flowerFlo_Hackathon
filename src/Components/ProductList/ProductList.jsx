@@ -3,11 +3,8 @@ import { productContext } from "../../Context/ProductContext";
 import "./ProductList.css";
 import tag from "../../Media/img/tag.png";
 import { NavLink } from "react-router-dom";
-
 import { Button } from "@mui/material";
-
 import { cartContext } from "../../Context/CartContext";
-
 
 const ProductList = () => {
   const { getProducts, products, prevPage, nextPage } =
