@@ -30,7 +30,7 @@ const Card = () => {
             </div>
             </NavLink>
           ))}
-          </>
+ </>
     );
 };
 

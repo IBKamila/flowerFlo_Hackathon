@@ -26,7 +26,7 @@ let page = 1;
 let totalPage = [];
 
 const ProductContextProvider = ({ children }) => {
-  const [searchVal, setSearchVal] = useState("");
+
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   const location = useLocation();
@@ -34,11 +34,18 @@ const ProductContextProvider = ({ children }) => {
   const addProduct = async (newProduct) => {
     await axios.post(API, newProduct);
   };
-
+  async function addComments(id, comments) {
+    await axios.patch(API, comments);
+    getProducts();
+  }
   const getProducts = async () => {
     const { data } = await axios.get(
+
+      `${API}${location.search}`);
+
       `${API}?_page=${page}&_limit=2&q=${searchVal}`
     );
+
     dispatch({
       type: "GET_PRODUCTS",
       payload: data,
@@ -90,9 +97,8 @@ const ProductContextProvider = ({ children }) => {
       value={{
         products: state.products,
         productDetails: state.productDetails,
-        searchVal,
-        setSearchVal,
         addProduct,
+        addComments,
         getProducts,
         getProductsDetails,
         deleteProduct,

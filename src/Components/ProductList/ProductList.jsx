@@ -45,6 +45,11 @@ const ProductList = () => {
 
   useEffect(() => {
     getProducts();
+  }, []);
+
+  useEffect(() => {
+    console.log('useEffect in product list')
+    getProducts();
     if (category === "all") {
       setSearchParams(paramsNoCategory());
     } else {

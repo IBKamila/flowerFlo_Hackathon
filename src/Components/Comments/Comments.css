@@ -1,0 +1,68 @@
+.containerComments {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.commentsInput {
+  width: 100%;
+  padding: 1%;
+}
+  .commentsInput textarea {
+    min-width: 90%;
+    max-width: 90%;
+    min-height: 150px;
+    max-height: 150px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+  }
+  
+  .commentsInput button {
+    height: 25px;
+    background-color: rgba(35, 104, 83, 0.808);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    border: none;
+    font-size: 0.9rem;
+    font-family: "Courier New", Courier, monospace;
+    cursor: pointer;
+  }
+  .commentsInput button:hover {
+    transform: scale(1.05);
+  }
+  
+  .commentsRead {
+    width: 40%;
+    margin: 2%;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+  .commentsRead .commentUser {
+    background-color: rgba(136, 96, 96, 0.377);
+    border-radius: 5px;
+    margin: 2px auto;
+    padding: 2%;
+  }
+  .commentsRead .commentText {
+    width: 96%;
+    text-overflow: ellipsis;
+    text-align: justify;
+    white-space: normal;
+  }
+  .commentUser .timeName {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  .timeName p {
+    margin: 0;
+  }
+  .timeName .time {
+    font-size: 0.8rem;
+  }
+  .timeName .name {
+    color: rgb(85, 54, 54);
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+  }

@@ -10,8 +10,9 @@ const initObj = {
     description: "",
     img: "",
     price: 0,
-    category: ""
-  };
+    category: "",
+    comments: []
+};
 
 
 const AddProduct = () => {
