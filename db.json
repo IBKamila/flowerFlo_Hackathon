@@ -1,6 +1,55 @@
 {
   "products": [
     {
+<<<<<<< HEAD
+      "title": "FlowerFlower",
+      "description": "Meet my family. There are five of us – my parents, my elder brother, my baby sister and me.",
+      "img": "https://scentales.com/wp-content/uploads/2020/06/yuna-flower-bouquet-01-600x800-1.jpg",
+      "price": "20",
+      "id": 3
+    },
+    {
+      "title": "Bouquet",
+      "description": "Meet my family. There are five of us – my parents, my elder brother, my baby sister and me. ",
+      "img": "https://i.pinimg.com/564x/22/1e/f9/221ef9f8a9e13cca543fab52ba8bed73.jpg",
+      "price": "50",
+      "id": 4
+    },
+    {
+      "title": "jnrysm",
+      "description": "mrsym",
+      "img": " etm",
+      "price": "4",
+      "id": 5
+    },
+    {
+      "title": "igbpi",
+      "description": "bkl",
+      "img": "ibgluj",
+      "price": "14",
+      "id": 6
+    },
+    {
+      "title": " rrg",
+      "description": " nrnrn",
+      "img": "tbtb",
+      "price": 0,
+      "id": 7
+    },
+    {
+      "title": ";kn;hoh",
+      "description": "ljblj",
+      "img": "bk;lk",
+      "price": "5",
+      "id": 8
+    },
+    {
+      "title": "ibg;3ipg",
+      "description": "ighpig",
+      "img": "ibgpig",
+      "price": "-7",
+      "id": 9
+=======
       "title": "Lorem ipsum",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       "img": "https://64.media.tumblr.com/d6b0bead0185ec7342a2a8c91e67664a/tumblr_pob3n4D4dy1su1ln8_640.jpg",
@@ -23,6 +72,7 @@
       "price": "56",
       "category": "pot",
       "id": 4
+>>>>>>> 6f308d43a7b521b23ffcde45003c7664947aee67
     }
   ]
 }

@@ -1,31 +1,35 @@
-.prodList{
-    background-color: white;
-    width: 80vw;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10vh;
+.prodList {
+  /* background-color: white; */
+  width: 80vw;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
 }
 
-.sideNav{
-    background-color: #7A513266;
-    margin-top: 0;
-    width: auto;
-    height: 70px;
+.sideNav {
+  background-color: #7a513266;
+  margin-top: 0;
+  width: auto;
+  height: 40px;
+  border-radius: 20px;
+  padding-left: 40px;
+  margin-left: 230px;
+  margin-right: 200px;
 }
 
-.sectionFirst{
-    display: flex;
+.sectionFirst {
+  display: flex;
 }
 
-.cards{
-    position: relative;
-    margin-top: 10vh;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-    width: 70vw;
+.cards {
+  position: relative;
+  margin-top: 10vh;
+  margin-left: 170px;
+  margin-right: auto;
+  display: flex;
+  /* flex-wrap: wrap; */
+  width: 70vw;
 }
 .card {
   background-color: #7a513266;
@@ -82,7 +86,8 @@
 }
 
 .btns {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
-  /* margin-left: 630px; */
+  margin-left: 480px;
+  margin-bottom: 40px;
 }
