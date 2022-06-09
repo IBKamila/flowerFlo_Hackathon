@@ -94,3 +94,7 @@ a {
 .adminPanel {
   margin-left: 80px;
 }
+.navLink:hover {
+  text-decoration: none;
+  color: #fff;
+}

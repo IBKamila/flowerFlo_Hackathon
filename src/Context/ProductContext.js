@@ -22,11 +22,10 @@ const reducer = (state = INIT_STATE, action) => {
   }
 };
 
-let page = 1;
-let totalPage = [];
+// let page = 1;
+// let totalPage = [];
 
 const ProductContextProvider = ({ children }) => {
-
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   const location = useLocation();
@@ -39,18 +38,16 @@ const ProductContextProvider = ({ children }) => {
     getProducts();
   }
   const getProducts = async () => {
-    const { data } = await axios.get(
+    const { data } = await axios.get(`${API}${location.search}`);
 
-      `${API}${location.search}`);
-
-      `${API}?_page=${page}&_limit=2&q=${searchVal}`
-    );
+    // `${API}?_page=${page}&_limit=2&q=${searchVal}`
+    // );
 
     dispatch({
       type: "GET_PRODUCTS",
       payload: data,
     });
-    totalPageFunc();
+    // totalPageFunc();
   };
 
   const getProductsDetails = async (id) => {
@@ -71,26 +68,24 @@ const ProductContextProvider = ({ children }) => {
     getProducts();
   };
 
-  // !pagination
+  // const productsLimit = 2;
 
-  const productsLimit = 2;
+  // async function totalPageFunc() {
+  //   let { data } = await axios.get(API);
+  //   totalPage = Math.ceil(data.length / productsLimit);
+  // }
 
-  async function totalPageFunc() {
-    let { data } = await axios.get(API);
-    totalPage = Math.ceil(data.length / productsLimit);
-  }
+  // const prevPage = () => {
+  //   if (page <= 1) return;
+  //   page++;
+  //   getProducts();
+  // };
 
-  const prevPage = () => {
-    if (page <= 1) return;
-    page++;
-    getProducts();
-  };
-
-  const nextPage = () => {
-    if (totalPage <= page) return;
-    page++;
-    getProducts();
-  };
+  // const nextPage = () => {
+  //   if (totalPage <= page) return;
+  //   page++;
+  //   getProducts();
+  // };
 
   return (
     <productContext.Provider
@@ -103,8 +98,8 @@ const ProductContextProvider = ({ children }) => {
         getProductsDetails,
         deleteProduct,
         editProduct,
-        prevPage,
-        nextPage,
+        // prevPage,
+        // nextPage,
       }}
     >
       {children}
