@@ -1,24 +1,6 @@
 {
   "products": [
     {
-      "title": "Pink",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-      "img": "https://cdn.shopify.com/s/files/1/1358/2883/products/classic-bouquet_300x300.jpg?v=1618167844",
-      "price": "70",
-      "category": "wedding",
-      "comments": [],
-      "id": 1
-    },
-    {
-      "title": "Lorem ipsum",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2Mwdm6zll93J7-TIT_uIddldfQWoe9O0qCA&usqp=CAU",
-      "price": "100",
-      "category": "wedding",
-      "comments": [],
-      "id": 2
-    },
-    {
       "title": "Boy",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
       "img": "https://cgaxisimages.fra1.cdn.digitaloceanspaces.com/2014/08/f23-copy.jpg",
